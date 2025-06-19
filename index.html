@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Study Tutorial Website - Interactive Fixed Navigation Menu</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="main-header" role="banner" aria-label="Primary Navigation">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="Homepage">
+        <span class="logo-icon" aria-hidden="true">menu_book</span>
+        <span>StudyTutorial</span>
+      </a>
+      <nav role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#courses" tabindex="0">Courses</a></li>
+          <li><a href="#tutorials" tabindex="0">Tutorials</a></li>
+          <li><a href="#resources" tabindex="0">Resources</a></li>
+          <li><a href="#contact" tabindex="0">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <h1>Welcome to StudyTutorial</h1>
+    <p>
+      Experience a premium, interactive navigation menu tailored for educational websites. This menu provides seamless navigation with smooth visual feedback and accessibility support.
+    </p>
+    <p>
+      Scroll down to see the header elegantly adapt its style to maintain focus and clarity. Hover or keyboard focus on links will highlight them with friendly micro-interactions.
+    </p>
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <p>Dive into a wide array of courses across technology, design, business, science, and arts. Each course features expert instructors, interactive exercises, and comprehensive materials.
+
+      Web Development Bootcamp: Learn HTML, CSS, JavaScript, and modern frameworks to build responsive websites and applications.
+      Data Science Essentials: Master data analysis, visualization, and machine learning methods using Python.
+      Graphic Design Fundamentals: Explore design principles, typography, and Adobe Creative Suite tools.
+      Business Analytics: Understand data-driven decision making and business intelligence strategies.</p>
+    </section>
+    <section id="tutorials">
+      <h2>Tutorials</h2>
+      <p><ul>
+          <li>JavaScript Basics: Understand variables, functions, and control structures.</li>
+          <li>CSS Flexbox and Grid: Learn modern layout techniques for responsive design.</li>
+          <li>React Component Lifecycle: Explore how React components work and manage state.</li>
+          <li>Python Data Structures: Get familiar with lists, dictionaries, and sets in Python.</li>
+        </ul></p>
+    </section>
+    <section id="resources">
+      <h2>Learning Resources</h2>
+      <p>Our tutorials break down complex topics into manageable steps accompanied by practical examples and practice exercises. Enjoy interactive content, including videos, code samples, and real-world scenarios.
+       <ul>
+          <li>Interactive Coding Challenges: Hands-on exercises to apply your knowledge.</li>
+          <li>Video Lectures: Engaging video content from industry experts.</li>
+          <li>Discussion Forums: Connect with peers and instructors for collaborative learning.</li>
+          <li>Downloadable Resources: Access PDFs, slides, and code snippets for offline study.</li>
+        </ul></p>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have questions, feedback, or need support? We're here to help you succeed. Reach out via our contact form or email us directly at <a href="a"> support@studytutorial.com </a>.
+
+      Stay connected by following us on social media for updates on new content, events, and special offers.</p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

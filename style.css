@@ -1,0 +1,198 @@
+:root {
+  --color-bg: rgba(255 255 255 / 0.75);
+  --color-bg-scrolled: rgba(255 255 255 / 0.95);
+  --color-text: #1e40af; 
+  --color-text-hover: #2563eb; 
+  --color-text-scrolled: #1e3a8a; 
+  --color-shadow: rgba(0 0 0 / 0.1);
+  --color-shadow-scrolled: rgba(0 0 0 / 0.18);
+  --spacing-x: 24px;
+  --header-height: 64px;
+  --transition-duration: 0.3s;
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: #f0f4ff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: rgb(11, 11, 141);
+  text-decoration: none;
+  outline-offset: 3px;
+  transition: color var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
+}
+
+a:hover, a:focus-visible {
+  color: var(--color-text-hover);
+  outline-offset: 2px;
+  transform: scale(1.05);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(24px);
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  padding: 0 var(--spacing-x);
+  transition: background-color var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+  user-select: none;
+}
+
+header.scrolled {
+  background-color: var(--color-bg-scrolled);
+  box-shadow: 0 4px 20px var(--color-shadow-scrolled);
+  color: var(--color-text-scrolled);
+}
+
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  letter-spacing: 0.05em;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-family: 'Material Icons';
+  font-size: 28px;
+  margin-right: 8px;
+  color: var(--color-text);
+  transition: color var(--transition-duration) ease;
+}
+
+header.scrolled .logo-icon {
+  color: var(--color-text-scrolled);
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  padding: 8px 0;
+  color: inherit;
+  border-bottom: 3px solid transparent;
+  transition: border-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-text-hover);
+  border-bottom-color: var(--color-text-hover);
+  background-color: rgba(79, 128, 234, 0.1); 
+  transform: scale(1.05);
+  outline-offset: 4px;
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--color-text-hover);
+  outline-offset: 4px;
+}
+
+nav a:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 0 16px;
+  }
+  nav ul {
+    gap: 16px;
+  }
+}
+
+
+main {
+  max-width: 960px;
+  margin: 80px auto 64px auto;
+  padding: 0 24px 48px 24px;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #1e40af; 
+  margin-bottom: 24px;
+}
+p {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: #4b5563; 
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+section > h2 {
+  font-weight: 700;
+  color: #000102; 
+  margin-top: 80px;
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f4ff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #a5b4fc; 
+  border-radius: 10px;
+  border: 2px solid #f0f4ff;
+}
